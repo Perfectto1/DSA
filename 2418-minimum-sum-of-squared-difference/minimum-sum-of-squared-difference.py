@@ -13,7 +13,7 @@ class Solution:
             if k >= cost:
                 k -= cost
             else:
-                level = d[i] - k // cnt      # common level of the top cnt elements
-                extra = k % cnt              # these get one more reduction
+                level = d[i] - k // cnt      
+                extra = k % cnt              
                 tail = sum(x * x for x in d[cnt:n])
                 return tail + extra * (level - 1) ** 2 + (cnt - extra) * level ** 2
